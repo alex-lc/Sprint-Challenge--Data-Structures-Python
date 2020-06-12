@@ -80,12 +80,13 @@ duplicates = []  # Return the list of duplicates in this data structure
 #         if name_1 == name_2:
 #             duplicates.append(name_1)
 
+# create a new binary search tree from BSTNode class
 bst = BSTNode('name_search')
 
-for name_1 in names_1:
+for name_1 in names_1:  # insert each name for the first list of names
     bst.insert(name_1)
 for name_2 in names_2:
-    if bst.contains(name_2) == True:
+    if bst.contains(name_2) == True: # if our bst contains a name in the second list of names, append it to duplicates
         duplicates.append(name_2)
 
 end_time = time.time()
